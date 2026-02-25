@@ -164,8 +164,7 @@ function SearchPanel() {
           rel="noopener noreferrer"
           className="flex items-center "
         >
-          <span className="mr-2 text-xs">Search by</span>
-          <span className="font-semibold">pagefind</span>
+          <span className="text-xs">Search by PageFind</span>
         </a>
       </div>
     </motion.div>

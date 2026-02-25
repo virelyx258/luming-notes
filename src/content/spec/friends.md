@@ -4,15 +4,32 @@ description: 我的小伙伴们和一些有趣的站点。
 comments: true
 ---
 
-## 怎么申请友链？
+## 申请友链
 
-想要交换友链的小伙伴们，欢迎去本站的 [Github 仓库](https://github.com/lxchapu/astro-gyoza/tree/main/src/content/friends)提交一个 PR。审核通过后，就可以在这里展示啦。
+只接受邮箱申请。请翻到本页底部 “本站信息” 处查看我的邮箱。
 
-请在`/src/content/friends/`目录下添加一个`<short-name>.yaml`文件，参考格式：
+为方便添加链接，请在申请时严格按下以下格式：
 
-```yml
-title: 网站名称
-description: 一句话介绍下你的网站或者你自己
-link: 网站地址
-avatar: 头像地址
+```
+  {
+    title: '站点标题',
+    img: '站点头像',
+    desc: '站点简介',
+    link: '站点地址',
+  },
+```
+
+申请后我会在 1~7 个工作日内进行审核并告知结果。提交申请前，请确认贵站已添加破站友链。
+
+本站信息：
+
+```
+站点名称：路明笔记
+站长昵称：Riseforever 或 路明
+站点链接：https://luming.cool
+站点简介：不慌张，不绝望，不狂妄，不投降。
+站点头像：https://cn.cravatar.com/avatar/302380667bdaf4e1390800e62494d4af?s=500&r=X
+或 站点Logo：https://img.luming.cool/i/2025/11/29/692aed1613cb0.webp
+（可根据自身情况选用Logo或头像）
+站长邮箱：hi[at]riseforever.cn（请手动将`[at]`替换为`@`）
 ```
