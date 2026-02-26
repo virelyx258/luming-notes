@@ -1,16 +1,7 @@
 @import './iconfont.css';
 @import './shiki.css';
 @import './markdown.css';
-@import './signature.css';
 @import './swup.css';
-
-@font-face {
-  font-family: 'MiSans-VF';
-  src: url('/fonts/MiSans-VF.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
 
 @font-face {
   font-family: 'Atkinson';

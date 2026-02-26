@@ -23,6 +23,12 @@
         "icon": "icon-github",
         "url": "https://github.com/virelyx258",
         "color": "rgb(24, 23, 23)"
+      },
+      {
+        "name": "Netease",
+        "icon": "icon-netease-cloud-music",
+        "url": "https://github.com/virelyx258",
+        "color": "rgb(229,0,38)"
       }
     ],
     "yiyan": "当第一颗卫星飞向大气层外，我们便以为自己终有一日会征服宇宙。"
