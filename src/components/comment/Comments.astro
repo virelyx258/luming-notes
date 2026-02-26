@@ -1,8 +1,8 @@
 ---
-import { Waline } from './Waline'
-import { waline } from '@/config.json'
+import { Twikoo } from './Twikoo'
+import { twikoo } from '@/config.json'
 ---
 
 <div>
-  {waline.serverURL && <Waline {...waline} client:visible />}
+  {twikoo.envId && <Twikoo {...twikoo} client:only="react" />}
 </div>

@@ -1,0 +1,93 @@
+.tk-container {
+  --tk-main-color: rgb(var(--color-accent));
+  --tk-main-text-color: rgb(var(--color-text-primary));
+  --tk-secondary-text-color: rgb(var(--color-text-secondary));
+  --tk-bg-color: rgb(var(--color-bg-primary));
+  --tk-border-color: rgb(var(--color-border-primary));
+}
+
+.tk-container .tk-action-link {
+  color: rgb(var(--color-accent));
+}
+
+.tk-container .tk-action-link:hover {
+  color: rgb(var(--color-accent));
+  opacity: 0.8;
+}
+
+.tk-container .tk-submit {
+  background-color: rgb(var(--color-accent));
+}
+
+.tk-container .tk-submit:hover {
+  opacity: 0.9;
+}
+
+.tk-container .tk-input {
+  background-color: rgb(var(--color-bg-secondary));
+  border-color: rgb(var(--color-border-primary));
+}
+
+.tk-container .tk-input:focus {
+  border-color: rgb(var(--color-accent));
+}
+
+.tk-container .tk-preview {
+  background-color: rgb(var(--color-bg-secondary));
+}
+
+.tk-container .tk-content {
+  background-color: rgb(var(--color-bg-secondary));
+}
+
+.tk-container .tk-nick {
+  color: rgb(var(--color-text-primary));
+}
+
+.tk-container .tk-time {
+  color: rgb(var(--color-text-secondary));
+}
+
+.tk-container .tk-comment {
+  border-color: rgb(var(--color-border-primary));
+}
+
+.tk-container .tk-replies {
+  border-color: rgb(var(--color-border-primary));
+}
+
+.tk-container .tk-expand {
+  color: rgb(var(--color-accent));
+}
+
+.tk-container .tk-icon {
+  color: rgb(var(--color-text-secondary));
+}
+
+.tk-container .tk-icon:hover {
+  color: rgb(var(--color-accent));
+}
+
+.tk-container .tk-owo-emotion {
+  max-height: 200px;
+}
+
+.tk-container .tk-pagination button {
+  color: rgb(var(--color-text-primary));
+  border-color: rgb(var(--color-border-primary));
+}
+
+.tk-container .tk-pagination button:hover {
+  color: rgb(var(--color-accent));
+  border-color: rgb(var(--color-accent));
+}
+
+.tk-container .tk-pagination button.tk-active {
+  color: #fff;
+  background-color: rgb(var(--color-accent));
+  border-color: rgb(var(--color-accent));
+}
+
+[data-theme='dark'] .tk-container {
+  --tk-main-color: rgb(var(--color-accent));
+}

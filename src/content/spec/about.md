@@ -60,4 +60,4 @@ comments: false
 
 **[Gyoza](https://github.com/lxchapu/astro-gyoza)** 为本站提供主题。
 
-[Waline](https://waline.js.org) 为本站提供评论系统。
+[Twikoo](https://twikoo.js.org) 为本站提供评论系统。

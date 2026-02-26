@@ -91,8 +91,8 @@
   "footer": {
     "startTime": "2024-10-13T00:00:00Z"
   },
-  "waline": {
-    "serverURL": "https://waline.luming.cool"
+  "twikoo": {
+    "envId": "https://twikoo.luming.cool"
   },
   "sponsor": {
     "wechat": "https://img.luming.cool/i/2026/02/25/699edb938e856.webp"
