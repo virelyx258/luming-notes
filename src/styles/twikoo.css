@@ -23,7 +23,7 @@ html.dark {
     @apply flex-col-reverse;
     .tk-input {
       textarea {
-        @apply rounded-[var(--radius-large)] py-4 px-6 !min-h-[150px] focus:border-[var(--primary)];
+        @apply rounded-lg py-4 px-6 !min-h-[150px] focus:border-[var(--primary)];
       }
     }
   }
@@ -55,8 +55,11 @@ html.dark {
   .tk-send,
   .tk-cancel {
     @apply border-none rounded-lg px-3 py-0 h-8
-       !bg-[var(--btn-regular-bg-active)] disabled:!bg-[var(--btn-regular-bg)]
-      !text-[var(--btn-content)] disabled:!text-[#ffffffa1];
+       bg-[var(--primary)] hover:opacity-90
+      text-white;
+  }
+  .tk-preview {
+    @apply bg-[var(--btn-regular-bg)] text-[var(--btn-content)] hover:bg-[var(--btn-regular-bg-hover)];
   }
 }
 
