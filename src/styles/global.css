@@ -4,6 +4,9 @@
 @import './swup.css';
 @import './twikoo.css';
 
+/* Twikoo 默认样式 - 必须全局加载避免 Swup 页面切换时丢失 */
+@import 'twikoo/dist/twikoo.css';
+
 @font-face {
   font-family: 'Atkinson';
   src: url('/fonts/atkinson-regular.woff') format('woff');
