@@ -1,10 +1,18 @@
 :root {
   --tk-text: black;
   --code-block-text: #d1d5db;
+  --tk-bg-color: #ffffff;
+  --tk-input-bg: #f5f5f5;
+  --tk-border-color: rgba(144, 147, 153, 0.31);
+  --tk-comment-bg: transparent;
 }
 
 html.dark {
   --tk-text: #d1d5db;
+  --tk-bg-color: #1a1a1a;
+  --tk-input-bg: #2d2d2d;
+  --tk-border-color: rgba(255, 255, 255, 0.1);
+  --tk-comment-bg: #252525;
 }
 
 .tk-comments {
@@ -24,6 +32,8 @@ html.dark {
     .tk-input {
       textarea {
         @apply rounded-lg py-4 px-6 !min-h-[150px] focus:border-[var(--primary)];
+        background-color: var(--tk-input-bg);
+        color: var(--tk-text);
       }
     }
   }
@@ -37,10 +47,13 @@ html.dark {
     .el-input-group__prepend {
       @apply !bg-inherit rounded-l-lg;
       min-height: inherit;
+      color: var(--tk-text);
     }
     input {
       @apply px-4 rounded-r-lg focus:!border-[var(--primary)];
       min-height: inherit;
+      background-color: var(--tk-input-bg);
+      color: var(--tk-text);
     }
   }
 }
@@ -65,13 +78,16 @@ html.dark {
 
 /* Comment title */
 .tk-comments-title {
+  @apply text-[var(--tk-text)];
   .__comments svg {
     @apply fill-[var(--primary)];
   }
 }
 
 .tk-comment {
-  @apply border-[1px] border-[rgba(144,147,153,0.31)] p-4 rounded-2xl;
+  @apply border-[1px] p-4 rounded-2xl;
+  border-color: var(--tk-border-color);
+  background-color: var(--tk-comment-bg);
   .tk-action-icon svg {
     @apply fill-[var(--primary)];
   }
@@ -93,15 +109,15 @@ html.dark {
   }
 }
 
-/* Content & Preview - 关键修复部分 */
+/* Content & Preview */
 .tk-content,
 .tk-preview-container {
-  /* 图片表情显示优化 */
+  color: var(--tk-text);
+
   img {
     @apply inline !align-bottom;
   }
 
-  /* 链接样式 */
   a {
     @apply cursor-pointer hover:underline text-[var(--primary)] font-medium;
   }
@@ -110,13 +126,12 @@ html.dark {
     @apply no-underline;
   }
 
-  /* 行内代码样式 - 修复：移除了可能冲突的选择器 */
   code:not(pre code) {
-    @apply bg-[var(--inline-code-bg)] rounded-md px-1 py-0.5 font-semibold;
-    color: var(--inline-code-color);
+    @apply rounded-md px-1 py-0.5 font-semibold;
+    background-color: var(--tk-input-bg);
+    color: var(--tk-text);
   }
 
-  /* 列表样式 - 修复：使用更具体的选择器，避免影响其他元素 */
   ul > li::marker {
     content: '•';
     color: var(--primary);
@@ -126,7 +141,6 @@ html.dark {
     color: var(--primary);
   }
 
-  /* 保留 Twikoo 原生的 Markdown 渲染 */
   p {
     margin: 0.5em 0;
   }
@@ -139,12 +153,13 @@ html.dark {
   h6 {
     margin: 0.75em 0 0.5em 0;
     font-weight: 600;
+    color: var(--tk-text);
   }
 
   blockquote {
     margin: 0.5em 0;
     padding-left: 1em;
-    border-left: 4px solid rgba(144, 147, 153, 0.3);
+    border-left: 4px solid var(--tk-border-color);
     color: var(--tk-text);
     opacity: 0.9;
   }
@@ -157,20 +172,21 @@ html.dark {
 
   th,
   td {
-    border: 1px solid rgba(144, 147, 153, 0.3);
+    border: 1px solid var(--tk-border-color);
     padding: 0.5em;
   }
 
   th {
-    background-color: var(--btn-regular-bg);
+    background-color: var(--tk-input-bg);
     font-weight: 600;
+    color: var(--tk-text);
   }
 }
 
 /* Replies */
 .tk-replies {
   .tk-comment {
-    @apply bg-[var(--page-bg)];
+    background-color: var(--tk-comment-bg);
     .tk-content {
       > span:first-of-type {
         @apply text-xs;
@@ -179,13 +195,12 @@ html.dark {
   }
 }
 
-/* Code block 代码块样式 */
+/* Code block */
 .twikoo .code-block {
   pre {
     @apply !rounded-xl;
   }
 
-  /* Code block fall back */
   pre:not([class]) {
     @apply bg-[#2d2d2d] overflow-auto p-2 text-[var(--code-block-text)];
   }
@@ -199,9 +214,46 @@ html.dark {
 .tk-expand-wrap .tk-expand,
 .tk-collapse-wrap .tk-expand {
   @apply hover:rounded-lg mt-1 hover:bg-[var(--btn-plain-bg-hover)];
+  color: var(--tk-text);
 }
 
 /* Emoji 组件显示修复 */
 .card-base {
   overflow: visible;
+}
+
+/* 深色模式额外适配 */
+html.dark {
+  .tk-input {
+    background-color: var(--tk-input-bg);
+  }
+
+  .tk-preview-container {
+    background-color: var(--tk-input-bg);
+  }
+
+  .tk-nick {
+    color: var(--tk-text);
+  }
+
+  .tk-time {
+    color: var(--tk-text);
+    opacity: 0.6;
+  }
+
+  .el-input__inner {
+    background-color: var(--tk-input-bg);
+    color: var(--tk-text);
+  }
+
+  .el-input-group__prepend {
+    background-color: var(--tk-input-bg);
+    color: var(--tk-text);
+    border-color: var(--tk-border-color);
+  }
+
+  .el-input__wrapper {
+    background-color: var(--tk-input-bg);
+    box-shadow: 0 0 0 1px var(--tk-border-color);
+  }
 }
