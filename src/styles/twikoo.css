@@ -5,6 +5,14 @@
   display: none;
 }
 
+/* 隐藏排序选项框（最新、最早、热门） - 尝试多种选择器 */
+.tk-comments-title .el-select,
+.tk-comments-title .el-select-wrapper,
+.tk-comments-title [class*='sort'],
+.tk-comments-title select {
+  display: none !important;
+}
+
 /* 评论容器 */
 .tk-comments,
 .tk-comments-container,
@@ -36,26 +44,34 @@
   opacity: 0.7;
 }
 
-/* 信息输入框 */
+/* 信息输入框容器 */
 .tk-meta-input {
   position: relative;
   margin-top: 0.75rem;
   margin-left: 0 !important;
+  margin-bottom: 0.5rem;
 }
 
 .tk-meta-input div {
   min-height: 2.5rem;
 }
 
-.tk-meta-input .el-input-group__prepend {
+/* 信息输入框默认样式 */
+.tk-meta-input .el-input {
+  flex: 1;
+  width: auto;
+}
+
+.tk-meta-input .el-input .el-input-group__prepend {
   background-color: rgb(var(--color-bg-secondary)) !important;
   color: rgb(var(--color-text-secondary)) !important;
   border-radius: 0.5rem 0 0 0.5rem;
   border: 1px solid rgb(var(--color-border-primary)) !important;
   min-height: 2.5rem;
+  transition: border-color 0.2s ease;
 }
 
-.tk-meta-input input {
+.tk-meta-input .el-input input {
   padding: 0 1rem;
   border-radius: 0 0.5rem 0.5rem 0;
   background-color: rgb(var(--color-bg-secondary)) !important;
@@ -63,29 +79,28 @@
   border: 1px solid rgb(var(--color-border-primary)) !important;
   border-left: none !important;
   min-height: 2.5rem;
+  transition: border-color 0.2s ease;
 }
 
-.tk-meta-input input:focus {
-  border-color: rgb(var(--color-accent)) !important;
+.tk-meta-input .el-input input:focus {
   outline: none;
-  box-shadow: 0 0 0 1px rgb(var(--color-accent));
 }
 
-.tk-meta-input input::placeholder {
+.tk-meta-input .el-input input::placeholder {
   color: rgb(var(--color-text-secondary));
 }
 
-/* Element UI 输入框聚焦样式 */
-.el-input__wrapper:focus-within {
-  box-shadow: 0 0 0 1px rgb(var(--color-accent)) !important;
+/* 单个输入框聚焦时的样式 - 只影响当前 el-input */
+.tk-meta-input .el-input:focus-within .el-input-group__prepend {
+  border-top-color: rgb(var(--color-accent)) !important;
+  border-left-color: rgb(var(--color-accent)) !important;
+  border-bottom-color: rgb(var(--color-accent)) !important;
 }
 
-.el-input__wrapper.is-focus {
-  box-shadow: 0 0 0 1px rgb(var(--color-accent)) !important;
-}
-
-.el-input__inner:focus {
-  border-color: rgb(var(--color-accent)) !important;
+.tk-meta-input .el-input:focus-within input {
+  border-top-color: rgb(var(--color-accent)) !important;
+  border-right-color: rgb(var(--color-accent)) !important;
+  border-bottom-color: rgb(var(--color-accent)) !important;
 }
 
 /* 按钮区域 */
@@ -345,4 +360,17 @@
 /* Emoji 组件显示修复 */
 .card-base {
   overflow: visible;
+}
+
+/* Loading 动画主题色适配 */
+.el-loading-spinner .path {
+  stroke: rgb(var(--color-accent)) !important;
+}
+
+.el-loading-spinner .el-loading-text {
+  color: rgb(var(--color-accent)) !important;
+}
+
+.el-loading-spinner i {
+  color: rgb(var(--color-accent)) !important;
 }

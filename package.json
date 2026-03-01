@@ -58,6 +58,7 @@
     "@inquirer/prompts": "^5.0.2",
     "lint-staged": "^15.2.2",
     "micromark-util-symbol": "^2.0.0",
+    "patch-package": "^8.0.1",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "simple-git-hooks": "^2.11.1"
@@ -68,5 +69,10 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx.astro,md,css,json}": "prettier --write"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "twikoo": "patches/twikoo.patch"
+    }
   }
 }

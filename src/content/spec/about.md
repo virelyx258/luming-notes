@@ -8,6 +8,12 @@ comments: false
 
 欢迎来访！ヾ(≧▽≦\*)o
 
+本站还有以下同步域名：
+
+- [riseforever.cn](https://www.riseforever.cn)
+- [rsv.ee](https://www.rsv.ee)
+- [luming.cool](https://www.luming.cool)
+
 # 联系📫
 
 **电子邮箱**：hi[at]riseforever.cn（请手动将`[at]`替换为`@`）。
