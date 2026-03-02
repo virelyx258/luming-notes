@@ -23,7 +23,7 @@ REDMI Watch 5 eSIM 固件修改工具是一个针对官方固件进行专项修�
 
 给自己的手表修改固件，只需 4 步：
 
-**第一步**：前往https://lum.hrabr.com/s/xrup下载 REDMI Watch 5 eSIM 的原版固件包。推荐下载已在测试中验证的 `3.110.029` 版本。_（请注意：第三方链接内容请自行校验，本教程不对其安全性负责。）_
+**第一步**：前往[https://lum.hrabr.com/s/xrup](https://lum.hrabr.com/s/xrup)下载 REDMI Watch 5 eSIM 的原版固件包。推荐下载已在测试中验证的 `3.110.029` 版本。_（请注意：第三方链接内容请自行校验，本教程不对其安全性负责。）_
 
 **第二步**：前往[项目主页](https://www.hiseed.top/rom/)下载固件修改 Python 脚本并运行。
 
